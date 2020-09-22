@@ -1,0 +1,265 @@
+@startuml
+Class User {
+	--用户--
+	uid-str-None
+	name-str-用户名
+	createDate-time-None
+}
+Class Province {
+	--省--
+	name-str-省名
+}
+Class City {
+	--市--
+	name-str-市名
+}
+City }-- Province
+Class Area {
+	--行政区--
+	name-str-行政区名
+}
+Area }-- City
+Class Bridgetype {
+	--桥梁种类--
+	name-str-桥梁种类名
+}
+Class Bridge {
+	--桥梁--
+	name-str-桥梁名
+	safe_score-float-安全分数
+	advice-text-管养建议
+	about-text-概况
+	monit_about-text-监测框架介绍
+	update_time-time-更新时间
+	create_time-time-创建时间
+}
+Bridge }-- Bridgetype
+Bridge }-- Province
+Bridge }-- City
+Bridge }-- Area
+Class Property {
+	--桥梁属性名--
+	name-str-桥梁属性名
+	about-text-简介
+}
+Class Propertyvalue {
+	--桥梁属性值--
+	value-float-桥梁属性名
+	create_time-time-创建时间
+}
+Propertyvalue }-- Property
+Propertyvalue }-- Bridge
+Class Filetype {
+	--文件类型--
+	name-str-文件类型名
+	type-int-文件的种类：1图片，2excel，3pdf
+}
+Class File {
+	--文件--
+	name-str-文件名
+	page-int-分册
+	update_time-time-更新时间
+	create_time-time-创建时间
+}
+File }-- Filetype
+File }-- Bridge
+Class Product {
+	--产品--
+	name-str-产品名
+}
+Class Productimg {
+	--产品图片--
+	name-str-图片名
+}
+Productimg }-- Product
+Class Location {
+	--桥梁位置--
+	name-str-位置名称
+	latitude-float-纬度
+	longitude-float-经度
+}
+Location }-- Bridge
+Class Device {
+	--传感器--
+	name-str-传感器名称
+	sn-str-传感器编号
+	exception-bool-是否异常
+	dtu_name-str-dtu名称
+	dtu_sn-str-dtu编号
+	dtu_img-str-dtu图片
+	fault-bool-是否故障
+	install_time-time-安装时间
+	update_time-time-更新时间
+	create_time-time-创建时间
+}
+Device }-- Product
+Device }-- Bridge
+Device }-- Location
+Device }-- Dtu
+Device }-- Monitarg
+Monitarg }-- Device
+Class Dtu {
+	--DTU--
+	name-str-DTU名称
+	sn-str-DTU编号
+	dtu_img-str-dtu图片
+	fault-bool-是否故障
+	install_time-time-安装时间
+	update_time-time-更新时间
+	create_time-time-创建时间
+}
+Class Collect {
+	--采集仪--
+	name-str-采集仪名称
+	sn-str-采集仪编号
+	fault-bool-是否故障
+	install_time-time-安装时间
+	update_time-time-更新时间
+	create_time-time-创建时间
+}
+Class Devicelog {
+	--设备日志--
+	position-int-设备位置代号
+	exception-bool-是否异常
+	fault-bool-是否故障
+	create_time-time-创建时间
+}
+Devicelog }-- Device
+Class Monitgroup {
+	--监控分组--
+	name-str-监控分组名
+}
+Class Monittype {
+	--监控类型--
+	name-str-监控类型名
+}
+Monittype }-- Monitgroup
+Class Monitarg {
+	--监控参数--
+	name-str-监控参数名
+}
+Monitarg }-- Monittype
+Class Monitvalue {
+	--监控参数值--
+	value-float-监控参数值
+}
+Monitvalue }-- Monitarg
+Monitvalue }-- Device
+Class Excepttrigger {
+	--监控参数异常条件--
+	value-float-监控参数值
+	compare-int-取值执行条件，1:<,2:>,3:=
+	logic-int-取值判断条件，1: and, 0: or
+}
+Excepttrigger }-- Monitvalue
+Class Valuelog {
+	--监控值日志--
+	value-float-监控参数名
+	create_time-time-创建时间
+}
+Valuelog }-- Monitvalue
+Class Warn {
+	--预警--
+	statu-bool-处理状态，1已处理，0未处理
+	about-text-预警处理结果
+}
+Warn }-- Bridge
+Warn }-- Device
+Class Contact {
+	--应急联络网--
+	about-text-简介
+}
+Contact }-- Bridge
+Class Plan {
+	--应急预案模板--
+	about-text-预警处理结果
+}
+Plan }-- Bridge
+Class Material {
+	--应急物资管理--
+	about-text-预警处理结果
+}
+Material }-- Bridge
+Class Emergency {
+	--应急抢险队伍管理--
+	about-text-预警处理结果
+}
+Emergency }-- Bridge
+Class Emgreport {
+	--应急报告管理--
+	about-text-预警处理结果
+}
+Emgreport }-- Bridge
+Class Udpdata {
+	--udp数据--
+	name-str-预警处理结果
+	e_time-time-时间
+	v1-float-v1
+	v2-float-v2
+	v3-float-v3
+	v4-float-v4
+	v5-float-v5
+	v6-float-v6
+	v7-float-v7
+	v8-float-v8
+	v9-float-v9
+	v10-float-v10
+	v11-float-v11
+	v12-float-v12
+	v13-float-v13
+	v14-float-v14
+	v15-float-v15
+	v16-float-v16
+	v17-float-v17
+	v18-float-v18
+	v19-float-v19
+	v20-float-v20
+	v21-float-v21
+	v22-float-v22
+	v23-float-v23
+	v24-float-v24
+	v25-float-v25
+	v26-float-v26
+	v27-float-v27
+	v28-float-v28
+	v29-float-v29
+	v30-float-v30
+	v31-float-v31
+	v32-float-v32
+	v33-float-v33
+	v34-float-v34
+	v35-float-v35
+	v36-float-v36
+	v37-float-v37
+	v38-float-v38
+	v39-float-v39
+	v40-float-v40
+	v41-float-v41
+	v42-float-v42
+	v43-float-v43
+	v44-float-v44
+	v45-float-v45
+	v46-float-v46
+	v47-float-v47
+	v48-float-v48
+	v49-float-v49
+	v50-float-v50
+	v51-float-v51
+	v52-float-v52
+	v53-float-v53
+	v54-float-v54
+	v55-float-v55
+	v56-float-v56
+	v57-float-v57
+	v58-float-v58
+	v59-float-v59
+	v60-float-v60
+	v61-float-v61
+	v62-float-v62
+	v63-float-v63
+	v64-float-v64
+	v65-float-v65
+	v66-float-v66
+	v67-float-v67
+}
+@enduml

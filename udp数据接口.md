@@ -1,0 +1,387 @@
+##udp数据接口
+###1、查看单个udp数据接口
+```javascript
+请求方式：GET
+请求URL：http://frp.sealan.tech:20303/api/v1/bridge/udpdata/<int:id>
+测试URL：frp.sealan.tech/api/v1/bridge/udpdata/<int:id>
+数据格式：JSON
+请求说明： 根据udp数据ID查看单个udp数据
+```
+**返回示例**
+> 正常情况下，会返回下述JSON数据包
+```javascript
+```javascript
+{
+	'success': true,
+	'error_code': 0,
+	'records':{
+		'name':'预警处理结果',
+		'e_time':'时间',
+		'v1':'v1',
+		'v2':'v2',
+		'v3':'v3',
+		'v4':'v4',
+		'v5':'v5',
+		'v6':'v6',
+		'v7':'v7',
+		'v8':'v8',
+		'v9':'v9',
+		'v10':'v10',
+		'v11':'v11',
+		'v12':'v12',
+		'v13':'v13',
+		'v14':'v14',
+		'v15':'v15',
+		'v16':'v16',
+		'v17':'v17',
+		'v18':'v18',
+		'v19':'v19',
+		'v20':'v20',
+		'v21':'v21',
+		'v22':'v22',
+		'v23':'v23',
+		'v24':'v24',
+		'v25':'v25',
+		'v26':'v26',
+		'v27':'v27',
+		'v28':'v28',
+		'v29':'v29',
+		'v30':'v30',
+		'v31':'v31',
+		'v32':'v32',
+		'v33':'v33',
+		'v34':'v34',
+		'v35':'v35',
+		'v36':'v36',
+		'v37':'v37',
+		'v38':'v38',
+		'v39':'v39',
+		'v40':'v40',
+		'v41':'v41',
+		'v42':'v42',
+		'v43':'v43',
+		'v44':'v44',
+		'v45':'v45',
+		'v46':'v46',
+		'v47':'v47',
+		'v48':'v48',
+		'v49':'v49',
+		'v50':'v50',
+		'v51':'v51',
+		'v52':'v52',
+		'v53':'v53',
+		'v54':'v54',
+		'v55':'v55',
+		'v56':'v56',
+		'v57':'v57',
+		'v58':'v58',
+		'v59':'v59',
+		'v60':'v60',
+		'v61':'v61',
+		'v62':'v62',
+		'v63':'v63',
+		'v64':'v64',
+		'v65':'v65',
+		'v66':'v66',
+		'v67':'v67',
+	}
+}
+```
+###2、创建udp数据接口
+```javascript
+请求方式：POST
+请求URL：http://frp.sealan.tech:20303/api/v1/bridge/udpdata
+测试URL：frp.sealan.tech/api/v1/bridge/udpdata
+数据格式：JSON
+请求说明： 创建udp数据
+```
+*请求参数说明*
+
+| 参数  | 类型   | 是否必须 | 说明        |
+| ----- | ------ | -------- | ----------- |
+|v1|float|否|v1|
+|v2|float|否|v2|
+|v3|float|否|v3|
+|v4|float|否|v4|
+|v5|float|否|v5|
+|v6|float|否|v6|
+|v7|float|否|v7|
+|v8|float|否|v8|
+|v9|float|否|v9|
+|v10|float|否|v10|
+|v11|float|否|v11|
+|v12|float|否|v12|
+|v13|float|否|v13|
+|v14|float|否|v14|
+|v15|float|否|v15|
+|v16|float|否|v16|
+|v17|float|否|v17|
+|v18|float|否|v18|
+|v19|float|否|v19|
+|v20|float|否|v20|
+|v21|float|否|v21|
+|v22|float|否|v22|
+|v23|float|否|v23|
+|v24|float|否|v24|
+|v25|float|否|v25|
+|v26|float|否|v26|
+|v27|float|否|v27|
+|v28|float|否|v28|
+|v29|float|否|v29|
+|v30|float|否|v30|
+|v31|float|否|v31|
+|v32|float|否|v32|
+|v33|float|否|v33|
+|v34|float|否|v34|
+|v35|float|否|v35|
+|v36|float|否|v36|
+|v37|float|否|v37|
+|v38|float|否|v38|
+|v39|float|否|v39|
+|v40|float|否|v40|
+|v41|float|否|v41|
+|v42|float|否|v42|
+|v43|float|否|v43|
+|v44|float|否|v44|
+|v45|float|否|v45|
+|v46|float|否|v46|
+|v47|float|否|v47|
+|v48|float|否|v48|
+|v49|float|否|v49|
+|v50|float|否|v50|
+|v51|float|否|v51|
+|v52|float|否|v52|
+|v53|float|否|v53|
+|v54|float|否|v54|
+|v55|float|否|v55|
+|v56|float|否|v56|
+|v57|float|否|v57|
+|v58|float|否|v58|
+|v59|float|否|v59|
+|v60|float|否|v60|
+|v61|float|否|v61|
+|v62|float|否|v62|
+|v63|float|否|v63|
+|v64|float|否|v64|
+|v65|float|否|v65|
+|v66|float|否|v66|
+|v67|float|否|v67|
+
+**返回示例**
+> 正常情况下，会返回下述JSON数据包
+```javascript
+{
+	'success': true,
+	'error_code': 0
+}
+```
+###3、修改udp数据接口
+```javascript
+请求方式：PUT
+请求URL：http://frp.sealan.tech:20303/api/v1/bridge/udpdata/<int:id>测试URL：frp.sealan.tech/api/v1/bridge/udpdata/<int:id>
+数据格式：JSON
+请求说明： 根据udp数据ID修改udp数据
+```
+*请求参数说明*
+
+| 参数  | 类型   | 是否必须 | 说明        |
+| ----- | ------ | -------- | ----------- |
+|name|str|否|预警处理结果|
+|v1|float|否|v1|
+|v2|float|否|v2|
+|v3|float|否|v3|
+|v4|float|否|v4|
+|v5|float|否|v5|
+|v6|float|否|v6|
+|v7|float|否|v7|
+|v8|float|否|v8|
+|v9|float|否|v9|
+|v10|float|否|v10|
+|v11|float|否|v11|
+|v12|float|否|v12|
+|v13|float|否|v13|
+|v14|float|否|v14|
+|v15|float|否|v15|
+|v16|float|否|v16|
+|v17|float|否|v17|
+|v18|float|否|v18|
+|v19|float|否|v19|
+|v20|float|否|v20|
+|v21|float|否|v21|
+|v22|float|否|v22|
+|v23|float|否|v23|
+|v24|float|否|v24|
+|v25|float|否|v25|
+|v26|float|否|v26|
+|v27|float|否|v27|
+|v28|float|否|v28|
+|v29|float|否|v29|
+|v30|float|否|v30|
+|v31|float|否|v31|
+|v32|float|否|v32|
+|v33|float|否|v33|
+|v34|float|否|v34|
+|v35|float|否|v35|
+|v36|float|否|v36|
+|v37|float|否|v37|
+|v38|float|否|v38|
+|v39|float|否|v39|
+|v40|float|否|v40|
+|v41|float|否|v41|
+|v42|float|否|v42|
+|v43|float|否|v43|
+|v44|float|否|v44|
+|v45|float|否|v45|
+|v46|float|否|v46|
+|v47|float|否|v47|
+|v48|float|否|v48|
+|v49|float|否|v49|
+|v50|float|否|v50|
+|v51|float|否|v51|
+|v52|float|否|v52|
+|v53|float|否|v53|
+|v54|float|否|v54|
+|v55|float|否|v55|
+|v56|float|否|v56|
+|v57|float|否|v57|
+|v58|float|否|v58|
+|v59|float|否|v59|
+|v60|float|否|v60|
+|v61|float|否|v61|
+|v62|float|否|v62|
+|v63|float|否|v63|
+|v64|float|否|v64|
+|v65|float|否|v65|
+|v66|float|否|v66|
+|v67|float|否|v67|
+
+**返回示例**
+> 正常情况下，会返回下述JSON数据包
+```javascript
+{
+	'success': true,
+	'error_code': 0
+}
+```
+###4、删除udp数据接口
+```javascript
+请求方式：DELETE
+请求URL：http://frp.sealan.tech:20303/api/v1/bridge/udpdata
+数据格式：JSON
+请求说明： 根据udp数据ID删除udp数据
+```
+*请求参数说明*
+
+| 参数  | 类型   | 是否必须 | 说明        |
+| ----- | ------ | -------- | ----------- |
+|ids|list|是|要删除的id列表|
+**返回示例**
+> 正常情况下，会返回下述JSON数据包
+```javascript
+{
+	'success': true,
+	'error_code': 0
+}
+```
+###5、获取udp数据分页列表接口
+```javascript
+请求方式：GET
+请求URL：http://frp.sealan.tech:20303/api/v1/bridge/udpdata/list
+测试URL：frp.sealan.tech/api/v1/bridge/udpdata/list
+```数据格式：JSON
+请求说明： 获取udp数据分页列表接口
+```
+*请求参数说明*
+
+| 参数  | 类型   | 是否必须 | 说明        |
+| ----- | ------ | -------- | ----------- |
+|current|int|否|页位置|
+|pageSize|int|否|单页条数|
+|sorter|object|否|排序参数，格式例如：{'price':'desend'}，就是按价格降序|
+|e_time|time|否|时间|
+
+**返回示例**
+> 正常情况下，会返回下述JSON数据包
+```javascript
+{
+	'success': true,
+	'error_code': 0,
+	'total':'总条数',
+	'data':[
+		{
+			'id':'udp数据ID',
+			'name':'预警处理结果',
+			'e_time':'时间',
+			'v1':'v1',
+			'v2':'v2',
+			'v3':'v3',
+			'v4':'v4',
+			'v5':'v5',
+			'v6':'v6',
+			'v7':'v7',
+			'v8':'v8',
+			'v9':'v9',
+			'v10':'v10',
+			'v11':'v11',
+			'v12':'v12',
+			'v13':'v13',
+			'v14':'v14',
+			'v15':'v15',
+			'v16':'v16',
+			'v17':'v17',
+			'v18':'v18',
+			'v19':'v19',
+			'v20':'v20',
+			'v21':'v21',
+			'v22':'v22',
+			'v23':'v23',
+			'v24':'v24',
+			'v25':'v25',
+			'v26':'v26',
+			'v27':'v27',
+			'v28':'v28',
+			'v29':'v29',
+			'v30':'v30',
+			'v31':'v31',
+			'v32':'v32',
+			'v33':'v33',
+			'v34':'v34',
+			'v35':'v35',
+			'v36':'v36',
+			'v37':'v37',
+			'v38':'v38',
+			'v39':'v39',
+			'v40':'v40',
+			'v41':'v41',
+			'v42':'v42',
+			'v43':'v43',
+			'v44':'v44',
+			'v45':'v45',
+			'v46':'v46',
+			'v47':'v47',
+			'v48':'v48',
+			'v49':'v49',
+			'v50':'v50',
+			'v51':'v51',
+			'v52':'v52',
+			'v53':'v53',
+			'v54':'v54',
+			'v55':'v55',
+			'v56':'v56',
+			'v57':'v57',
+			'v58':'v58',
+			'v59':'v59',
+			'v60':'v60',
+			'v61':'v61',
+			'v62':'v62',
+			'v63':'v63',
+			'v64':'v64',
+			'v65':'v65',
+			'v66':'v66',
+			'v67':'v67',
+		},
+		...
+	]
+	}
+}
+```
