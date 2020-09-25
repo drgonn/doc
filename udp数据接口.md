@@ -298,7 +298,6 @@
 |current|int|否|页位置|
 |pageSize|int|否|单页条数|
 |sorter|object|否|排序参数，格式例如：{'price':'desend'}，就是按价格降序|
-|e_time|time|否|时间|
 
 **返回示例**
 > 正常情况下，会返回下述JSON数据包
