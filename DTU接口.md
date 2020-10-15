@@ -15,9 +15,9 @@
 	'success': true,
 	'error_code': 0,
 	'records':{
-		'name':'DTU名称',
-		'sn':'DTU编号',
-		'dtu_img':'dtu图片',
+		'name':'名称',
+		'sn':'编号',
+		'dtu_img':'图片',
 		'fault':'是否故障',
 		'install_time':'安装时间',
 		'update_time':'更新时间',
@@ -37,9 +37,9 @@
 
 | 参数  | 类型   | 是否必须 | 说明        |
 | ----- | ------ | -------- | ----------- |
-|name|str|是|DTU名称|
-|sn|str|是|DTU编号|
-|dtu_img|str|否|dtu图片|
+|name|str|是|名称|
+|sn|str|是|编号|
+|dtu_img|str|否|图片|
 |install_time|time|否|安装时间|
 
 **返回示例**
@@ -61,9 +61,9 @@
 
 | 参数  | 类型   | 是否必须 | 说明        |
 | ----- | ------ | -------- | ----------- |
-|name|str|否|DTU名称|
-|sn|str|否|DTU编号|
-|dtu_img|str|否|dtu图片|
+|name|str|否|名称|
+|sn|str|否|编号|
+|dtu_img|str|否|图片|
 |fault|bool|否|是否故障|
 
 **返回示例**
@@ -120,9 +120,9 @@
 	'data':[
 		{
 			'id':'DTUID',
-			'name':'DTU名称',
-			'sn':'DTU编号',
-			'dtu_img':'dtu图片',
+			'name':'名称',
+			'sn':'编号',
+			'dtu_img':'图片',
 			'fault':'是否故障',
 			'install_time':'安装时间',
 			'update_time':'更新时间',
