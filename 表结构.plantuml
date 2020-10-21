@@ -12,11 +12,15 @@ Class Province {
 Class City {
 	--市--
 	name-str-市名
+	latitude-float-纬度
+	longitude-float-经度
 }
 City }-- Province
 Class Area {
 	--行政区--
 	name-str-行政区名
+	latitude-float-纬度
+	longitude-float-经度
 }
 Area }-- City
 Class Bridgetype {
@@ -28,8 +32,11 @@ Class Bridge {
 	name-str-桥梁名
 	safe_score-float-安全分数
 	advice-text-管养建议
+	address-text-详细地址
 	about-text-概况
 	monit_about-text-监测框架介绍
+	latitude-float-纬度
+	longitude-float-经度
 	update_time-time-更新时间
 	create_time-time-创建时间
 }
@@ -141,6 +148,7 @@ Class Monitvalue {
 	--监控参数值--
 	value-float-监控参数当前值
 }
+Monitvalue }-- Monittype
 Monitvalue }-- Monitarg
 Monitvalue }-- Device
 Monitvalue }-- Bridge
